@@ -59,7 +59,7 @@ vector<ll> dis(N+1,inf);
 void dijkstra(pair<ll,ll> node){
     priority_queue<pair<ll,ll>,vector<pair<ll,ll>>,greater<pair<ll,ll>>> pq;
     pq.push(node);
-
+    if(dis[parent]<cost) continue;
     while(pq.size()){
         ll cost=pq.top().fi;
         ll parent=pq.top().se;         
