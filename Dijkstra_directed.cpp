@@ -64,7 +64,7 @@ void dijkstra(pair<ll,ll> node){
         ll cost=pq.top().fi;
         ll parent=pq.top().se;         
         pq.pop();
-
+        if(dis[parent]<cost) continue;
         for(auto child: v[parent]){
             if(cost+child.se<dis[child.fi]){
                 ll new_dis=cost+child.se;
