@@ -66,13 +66,14 @@ vector<ll> v[N+1],visited(N+1);
 void bfs(ll node){
     queue<ll> q;
     q.push(node);
+    visited[node]=1;
     while(q.size()){
         ll parent=q.front();
         cout << parent sp;
-        q.pop();
-        visited[parent]=1;
+        q.pop();        
         for(auto child: v[parent]){
             if(visited[child]==0){
+                visited[child]=1;
                 q.push(child);
             }
         }
