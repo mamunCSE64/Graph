@@ -85,8 +85,8 @@ int main()
                     q.pop();
                     for(auto child: v[p]){
                         if(visited[child]){
-                            int par=parent[child];
-                            if(par!=p){                                
+                            int par=parent[p];
+                            if(par!=child){                                
                                 cout << "Cycyle" nl;goto again;
                             }
                         }else{
