@@ -68,6 +68,9 @@ int main()
         ll node,edge;
         cin>>node>>edge;
         map<ll,ll> m;
+        for(i=0;i<node;i++){
+            m[i]=0;
+        }
         for(i=0;i<edge;i++){
             ll x,y; cin>>x>>y;            
             v[x].pb(y);
@@ -82,6 +85,7 @@ int main()
         vector<ll> ans;
         while(q.size()){
             int node=q.front();
+            ans.push_back(node);
             q.pop();
             for(auto child: v[node]){
                 m[child]--;
